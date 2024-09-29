@@ -2,7 +2,7 @@
 
 ---
 This project involves the creation and deployment of an ERC721A-compliant NFT (Non-Fungible Token)
-contract named MetaTokenNFT on Goerli Ethereum testnet then approve and deposit the NFT to Polygon
+contract named MetaTokenNFT on Sepolia Ethereum testnet then approve and deposit the NFT to Polygon
 Amoy using their fxPortal bridge. The NFTs represent a collection of futuristic electric car with glowing accents, flying through a neon-lit city, each featuring
 a distinct artistic style and angle.
 
@@ -36,9 +36,9 @@ npm install
 ---
 ### Deploy contract
 First compile the contract using `npx hardhat compile` then deploy the contract onto
-Goerli Ethereum testnet using the following command:
+Sepolia Ethereum testnet using the following command:
 ```shell
-npx hardhat run --network goerli scripts/nft/deploy.js
+npx hardhat run --network Sepolia scripts/nft/deploy.js
 ```
 
 Then, if everything is set up right, you get a console response like this:
@@ -52,7 +52,7 @@ the required variables in the `.env` file.
 
 Then run the `batchMint.js` script with this hardhat command:
 ```shell
-npx hardhat run --network goerli scripts/nft/batchMint.js
+npx hardhat run --network Sepolia scripts/nft/batchMint.js
 ```
 The response log will look like:
 ```
@@ -62,7 +62,7 @@ Successfully minted: <number> MetaToken NFTs to <WALLET-ADDRESS>
 Pass in the Polygon Amoy bridged address of your contract to `BRIDGE-ADDRESS` in
 `.env`, then run the `approveTransfer.js` script with hardhat:
 ```shell
-npx hardhat run --network goerli scripts/nft/approveTransfer.js
+npx hardhat run --network Sepolia scripts/nft/approveTransfer.js
 ```
 The response should look like this:
 ```
